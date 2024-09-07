@@ -1,0 +1,472 @@
+settings:
+  excelFile: 'excel.xlsx'
+  maxParticipationAtWeek: 4
+
+month: September
+year: 2024
+
+excluded:
+
+places:
+  mercado:
+    description: "Mercado municipal"
+    location: "<google maps link>"
+  clinica:
+    description: "Cerca de la clínica del Dr. Coto"
+    location: "<google maps link>"    
+  centro:
+    description: "MC San Antonio frente a Catedral"
+    location: "<google maps link>"    
+  metro:
+    description: "Al frente de escuela Metropolitana"
+    location: "<google maps link>"
+  guarjila:
+    description: "Parquecito de guarjila"
+    location: "<google maps link>"  
+  neveria:
+    description: "Por ciber AAA, frente a gasolinera del Calvario"
+    location: "<google maps link>"
+  hospital:
+    description: "Arriba de entrada de ambulancias"
+    location: "<google maps link>"    
+
+turns:
+  morning+:
+    start: 6:00
+    end: 7:00
+  morning:
+    start: 6:00
+    end: 8:00
+  afternoon:
+    start: 14:30
+    end: 16:30
+  afternoon+:
+    start: 15:00
+    end: 17:00
+  night:
+    start: 17:00
+    end: 19:00
+
+persons:
+  "Luis":
+    name: "Luis Ibáñez"
+    phone: "9876-5432"
+    partner: "Yolanda"
+    justPartners: false
+    gender: "M"
+    availability:
+      "Tuesday":
+        places:
+          - metro
+        turns:
+          - afternoon
+  "Yolanda":
+    name: "Yolanda de Ibáñez"
+    phone: "9876-5432"
+    partner: "Luis"
+    justPartners: false
+    gender: "F"
+    availability:
+      "Tuesday":
+        places:
+          - metro
+        turns:
+          - afternoon
+  "Raquel":
+    name: "Raquel Ibáñez"
+    phone: "6543-2109"
+    gender: "F"
+    availability:
+      "Sunday":
+        places:
+          - metro
+        turns:
+          - morning
+          - afternoon
+  "Roxana":
+    name: "Roxana Ibáñez"
+    phone: "6543-2109"
+    gender: "F"
+    availability:
+      "*":
+        places:
+          - metro
+        turns:
+          - afternoon+
+  "Juan":
+    name: "Juan F. Torres"
+    phone: "7890-3216"
+    partner: "Deysi"
+    justPartners: false
+    gender: "M"
+    availability:
+      "Friday":
+        places:
+          - guarjila
+        turns:
+          - morning
+      "*":
+        places:
+          - "*"
+        turns:
+          - morning
+        blacklist:
+          - Monday
+  "Deisy":
+    name: "Deysi de Torres"
+    phone: "7890-3216"
+    partner: "Felipe"
+    justPartners: false
+    gender: "F"
+    availability:
+      "Friday":
+        places:
+          - guarjila
+        turns:
+          - morning
+      "*":
+        places:
+          - mercado
+          - clinica
+          - centro
+          - metro
+        turns:
+          - morning
+  "Leonor":
+    name: "Leonor Hernández"
+    phone: "0123-4567"
+    gender: "F"
+    availability:
+      "Thursday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning
+      "Friday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning
+      "Saturday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning          
+  "Mirna":
+    name: "Mirna de Franco"
+    phone: "0123-4567"
+    gender: "F"
+    availability:
+      "Wednesday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning
+  "Lucia":
+    name: "Lucy Melgar"
+    phone: "4567-8901"
+    gender: "F"
+    availability:
+      "Wednesday":
+        places:
+          - mercado
+          - clinica
+          - centro
+          - hospital
+        turns:
+          - morning
+      "Thursday":
+        places:
+          - mercado
+          - clinica
+          - centro
+          - hospital
+        turns:
+          - morning
+      "Friday":
+        places:
+          - mercado
+          - clinica
+          - centro
+          - hospital
+        turns:
+          - morning
+          - afternoon       
+  "Iris":
+    name: "Iris Orellana"
+    phone: "4567-8901"
+    gender: "F"
+    availability:
+      "*":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning+
+  "Ana":
+    name: "Anita Castillo"
+    phone: "9876-5432"
+    gender: "F"
+    availability:
+      "Tuesday":
+        places:
+          - mercado
+          - clinica
+          - centro
+        turns:
+          - morning
+      "Wednesday":
+        places:
+          - mercado
+          - clinica
+          - centro
+        turns:
+          - morning
+  "Ernesto":
+    name: "Ernesto Zelaya"
+    phone: "9876-5432"
+    partner: "Beatriz"
+    justPartners: true
+    gender: "M"
+    availability:
+      "*":
+        places:
+          - "*"
+        turns:
+          - night
+  "Beatriz":
+    name: "Beatriz de Zelaya"
+    phone: "2345-6789"
+    partner: "Ernest"
+    justPartners: false
+    gender: "F"
+    availability:
+      "*":
+        places:
+          - "*"
+        turns:
+          - "morning"
+          - "afternoon"
+          - "night"
+  "Neris":
+    disabled: true
+    name: "Neris de Salazar"
+    phone: "2345-6789"
+    gender: "F"
+    availability:
+      "Monday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning
+      "Wednesday":
+        places:
+          - mercado
+          - clinica
+        turns:
+          - morning
+  "Antono":
+    name: "José A. Salazar"
+    phone: "3456-7890"
+    gender: "M"
+    availability:
+      "*":
+        places:
+          - centro
+          - mercado
+          - clinica
+        turns:
+          - morning
+  "Marina":
+    name: "Marina Morales"
+    phone: "3456-7890"
+    gender: "F"
+    availability:
+      "Monday":
+        places:
+          - "*"
+        turns:
+          - afternoon
+      "Thursday":
+        places:
+          - "*"
+        turns:
+          - afternoon
+  "Renato":
+    name: "Luis Cabañas"
+    phone: "4567-8901"
+    partner: "Gladis"
+    justPartners: true
+    gender: "M"
+    availability:
+      "Saturday":
+        places:
+          - centro
+        turns:
+          - morning
+  "Gladis":
+    name: "Gladis de Cabañas"
+    phone: "4567-8901"
+    partner: "Renato"
+    justPartners: true
+    gender: "F"
+    availability:
+      "Saturday":
+        places:
+          - centro
+        turns:
+          - morning
+  "Kath":
+    name: "Kath Zamora"
+    phone: "5678-9012"
+    gender: "F"
+    availability:
+      "Monday":
+        places:
+          - mercado
+          - clinica
+          - hospital
+        turns:
+          - morning
+      "Friday":
+        places:
+          - mercado
+          - clinica
+          - hospital
+        turns:
+          - morning
+          - afternoon
+      "Saturday":
+        places:
+          - mercado
+          - clinica
+          - hospital
+        turns:
+          - morning      
+  "Rosario":
+    name: "Rosario Rivas"
+    phone: "5678-9012"
+    gender: "F"
+    availability:
+      "*":
+        places:
+          - mercado
+          - clinica
+          - centro
+          - hospital
+        turns:
+          - morning
+          - afternoon
+          - morning+
+          - afternoon+
+  "Javier":
+    name: "Javier Menjívar"
+    phone: "6789-0123"
+    partner: "Marcela"
+    justPartners: false
+    gender: "M"
+    availability:
+      "Tuesday":
+        places:
+          - neveria
+          - centro
+        turns:
+          - afternoon
+  "Marcela":
+    name: "Marcela Menjívar"
+    phone: "6789-0123"
+    partner: "Javier"
+    justPartners: false
+    gender: "F"
+    availability:
+      "Tuesday":
+        places:
+          - neveria
+        turns:
+          - afternoon
+  "Jokebed":
+    name: "Jokebed Menjívar"
+    phone: "6789-0123"
+    gender: "F"
+    availability:
+      "Tuesday":
+        places:
+          - neveria
+        turns:
+          - afternoon         
+  "Jonathan":
+    name: "Jonathan Galán"
+    phone: "6789-0123"
+    gender: "F"
+    availability:
+      "Tuesday":
+        places:
+          - metro
+        turns:
+          - afternoon
+  "Tony":
+    name: "Tony Salazar"
+    phone: "7890-1234"
+    gender: "M"
+    availability:
+      "*":
+        places:
+          - "*"
+        turns:
+          - "*"
+  "Salomón":
+    name: "Salomón Ayala"
+    phone: "7890-1234"
+    partner: "Xiomara"
+    justPartners: true
+    gender: "M"
+    availability:
+      "Saturday":
+        places:
+          - "*"
+        turns:
+          - morning
+      "Sunday":
+        places:
+          - "*"
+        turns:
+          - morning
+  "Xiomara":
+    name: "Xiomara de Ayala"
+    phone: "8901-2345"
+    partner: "Marga"
+    justPartners: true
+    gender: "F"
+    availability:
+      "Monday":
+        places:
+          - neveria
+        turns:
+          - afternoon
+      "Thursday":
+        places:
+          - neveria
+        turns:
+          - afternoon
+  "Marga":
+    name: "Marga Meléndez"
+    phone: "8901-2345"
+    partner: "Xiomara"
+    justPartners: true
+    gender: "F"
+    availability:
+      "Monday":
+        places:
+          - neveria
+        turns:
+          - afternoon
+      "Thursday":
+        places:
+          - neveria
+        turns:
+          - afternoon
